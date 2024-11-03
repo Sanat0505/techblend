@@ -1,6 +1,10 @@
 import React from "react";
-import Footer from "./Footer";
 import ContactUs from "./ContactUs";
+import sanatImage from "../assets/images/sanat1.png";
+import asmaImage from "../assets/images/asma.png";
+import anushkaImage from "../assets/images/anushka.png";
+import aartiImage from "../assets/images/aarti.png";
+import Product from "./Product";
 
 const teamMembers = [
   {
@@ -8,25 +12,27 @@ const teamMembers = [
     role: "Full Stak Developer",
     description:
       "Passionate about web development, particularly in D-Apps(decentrelized applications using bloackchain)",
-    image: "../assets/images/techblend.png",
+    image: sanatImage,
   },
   {
-    name: "Team member 2",
-    role: "Role",
-    description: "....",
-    image: "path-to-image2.jpg",
+    name: "Anushka Jajal",
+    role: "Backend developer",
+    description:
+      "I am a backend developer specializing in Python and Django, with a strong foundation in building scalable web applications. ",
+    image: anushkaImage,
   },
   {
-    name: "Team member 3",
-    role: "Role",
-    description: "....",
-    image: "path-to-image3.jpg",
+    name: "Asmaa Abubader",
+    role: "Frontend Developer",
+    description:
+      "A UX Designer in progress ( as entry level). Having a solid knowledge using Mysql",
+    image: asmaImage,
   },
   {
-    name: "Team member 4",
-    role: "Role",
-    description: "....",
-    image: "path-to-image4.jpg",
+    name: "Aarti Majumdar",
+    role: "Web developer",
+    description: "Deeply committed to advancing web and API development, utilizing  frontend development expertise to build responsive, intuitive, and high-performing digital solutions.",
+    image: aartiImage,
   },
   {
     name: "Team member 5",
@@ -36,45 +42,14 @@ const teamMembers = [
   },
 ];
 
-const headerVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
-};
-
-const titleVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { delay: 0.5, duration: 1 } },
-  hover: { scale: 1.1, transition: { yoyo: Infinity, duration: 0.3 } },
-};
-
 const Team = () => {
   return (
     <div id="team" className="min-h-screen bg-gray-200 text-black rounded-lg">
-      {/* <ParticlesBackground /> */}
-      {/* Header */}
-      {/* <header className="flex flex-col items-center justify-center py-8 bg-gradient-to-r from-blue-500 to-teal-400 text-white">
-        <motion.img
-          src={logo}
-          alt="TechBlend Logo"
-          className="h-24 mb-4"
-          initial="hidden"
-          animate="visible"
-          variants={headerVariants}
-        />
-        <motion.h1
-          className="text-4xl font-bold"
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-          variants={titleVariants}
-        >
-          TechBlend
-        </motion.h1>
-      </header> */}
-
       {/* About Section */}
       <section className="py-10 px-5 text-center">
-        <h2 className="lg:text-4xl text-3xl font-semibold mb-4">Meet Our Team</h2>
+        <h2 className="lg:text-4xl text-3xl font-semibold mb-4">
+          Meet Our Team
+        </h2>
         <p className="lg:text-2xl text-lg">
           We are a group of passionate developers and designers dedicated to
           creating cutting-edge tech solutions.
@@ -91,7 +66,7 @@ const Team = () => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 md:h-64 lg:h-96 object-cover"
             />
             <div className="p-6">
               <h3 className="text-2xl font-semibold">{member.name}</h3>
@@ -101,6 +76,8 @@ const Team = () => {
           </div>
         ))}
       </section>
+      <Product />
+
       <ContactUs />
     </div>
   );

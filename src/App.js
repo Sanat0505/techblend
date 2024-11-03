@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
-
-import Team from "./components/Team";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from "./components/Footer";
 import About from "./components/About";
 import Header from "./components/Header";
 import Aos from "aos";
@@ -11,7 +8,7 @@ function App() {
   Aos.init();
   const [open, setOpen] = useState(false);
   return (
-    <div className="min-h-screen font-LuckiestGuy rounded-lg flex items-center justify-center p-10 relative">
+    <div className="min-h-screen font-Mulish rounded-lg flex items-center justify-center p-10 relative">
       {/* <Team /> */}
       <div className="flex flex-col font-monda shadow-box_shadow rounded-lg ">
         <BrowserRouter>
@@ -23,8 +20,6 @@ function App() {
             
           </div>
         </BrowserRouter>
-      {/* <Footer /> */}
-
       </div>
     </div>
   );

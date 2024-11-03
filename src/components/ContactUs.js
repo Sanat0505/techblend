@@ -44,8 +44,6 @@ function ContactUs() {
             ></iframe>
           </div>
         </div>
-
-        {/* Footer */}
         <div className="text-center text-gray-500 text-sm mt-10">
           <p>© 2024 TechBlend. All rights reserved.</p>
         </div>

@@ -1,147 +1,73 @@
 import React from 'react';
-import HeroSection from './HeroSection';
-import classNames from 'classnames';
 import logo from '../assets/images/techblend.png';
-import { Link } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const menu = [
-  {
-    name: 'About',
-    href: '/',
-    id: 'about',
-  },
-
-  {
-    name: 'Our Team',
-    href: '#team',
-    id: 'ourteam',
-  },
-  {
-    name: 'Our Product',
-    href: '#product',
-    id: 'product',
-  },
-  {
-    name: 'Contact Us',
-    href: '#contact',
-    id: 'contact',
-  },
+  { name: 'About', href: '#about', id: 'about' },
+  { name: 'Our Team', href: '#team', id: 'ourteam' },
+  { name: 'Our Product', href: '#product', id: 'product' },
+  { name: 'Contact Us', href: '#contact', id: 'contact' },
 ];
 
-export default function Header({ setOpen, headerOpen }) {
+export default function Header() {
   return (
-    <div className=" header-image  small_shadow text-black bg-opacity-20 rounded-lg">
-      <div className="bg-gray-200 rounded-lg ">
-        <header className="container mx-auto px-6 ">
-          <div
-            className={`mx-4 py-5 sm:py-5 md:py-10  sm:mx-4 md:mx-4 lg:mx-6 2xl:mx-0 ${
-              headerOpen && 'h-screen overflow-hidden'
-            }`}
-          >
-            <Disclosure as="nav" className="">
-              {({ open, close }) => {
-                setOpen(open);
-                return (
-                  <>
-                    <div className="flex justify-between">
-                      <div
-                        className={`flex animate__animated animate__lightSpeedInLeft  animate__delay-1s ${
-                          open ? 'hidden' : 'block'
-                        }`}
-                      >
-                        <div className="flex lg:flex-1">
-                          <Link to="/" className="-m-1.5 p-1.5">
-                            <div className="flex gap-[10px] items-center">
-                              <div className=" rounded-full">
-                                <img className="h-20 w-auto" src={logo} alt="TechBlend" />
-                              </div>
-                              {/* <div className="font-JotiOne text-2xl">TechBlend</div> */}
-                            </div>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="flex items-center animate__animated animate__bounceInDown animate__delay-1s text-base tracking-wide">
-                        <div className="hidden md:ml-6 md:flex md:items-center">
-                          <div className="hidden md:-my-px md:ml-6 md:flex md:space-x-14 font-JotiOne text-lg md:text-2xl lg:text-3xl font-bold">
-                            {menu.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className={({ isActive }) =>
-                                  classNames(
-                                    isActive
-                                      ? 'border-aquamarine'
-                                      : 'hover:border-aquamarine border-transparent',
-                                    '   capitalize leading-5 tracking-[0.016em] text-nobel cursor-pointer'
-                                  )
-                                }
-                              >
-                                {item.name}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="md:hidden items-center">
-                        <div className="-mr-2 flex items-center md:hidden">
-                          <Disclosure.Button className=" inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-0 focus:ring-indigo-500 focus:ring-offset-0">
-                            <span className="sr-only">Open main menu</span>
-                            {open ? (
-                              <XMarkIcon
-                                className="block h-6 w-6 focus:ring-offset-0"
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                            )}
-                          </Disclosure.Button>
-                        </div>
-                      </div>
-                    </div>
+    <div className="header-image small_shadow font-semibold text-black bg-opacity-20 rounded-lg">
+      <div className="bg-gray-200 rounded-lg">
+        <header className="container mx-auto px-6">
+          <Disclosure as="nav">
+            {({ open }) => (
+              <>
+                <div className="flex justify-between items-center py-5">
+                  {/* Logo */}
+                  <a href="/  " className="flex items-center gap-2">
+                    <img src={logo} alt="TechBlend" className="h-10 w-auto" />
+                    <span className="font-bold text-xl">TechBlend</span>
+                  </a>
 
-                    <Disclosure.Panel className="bg-header-mobile animate__animated animate__slideInDown animate__faster absolute left-0 right-0 top-16 flex h-screen flex-col justify-evenly lg:hidden">
-                      <div className="absolute -top-[44px] left-4">
-                        <div className="flex lg:flex-1">
-                          <Link to="/" className="-m-1.5 p-1.5">
-                            <div className="flex gap-[10px] items-center">
-                              <div className="bg-white p-2 rounded-full">
-                                <img className="h-8 w-auto" src={logo} alt="Fine" />
-                              </div>
-                              <div className="font-JotiOne text-3xl text-white ">TechBlend</div>
-                            </div>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="grid gap-5 font-Caveat space-y-1 pt-2 pb-3 text-2xl font-JotiOne font-medium text-center animate__animated animate__bounceInDown animate__delay-1s">
-                        {menu.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            onClick={() => close()}
-                            className={({ isActive }) =>
-                              classNames(
-                                isActive
-                                  ? ''
-                                  : 'hover:bg-aquamarine-400 border-transparent text-nobel hover:border-gray-300 hover:text-gray-800',
-                                'block py-2 pl-3 pr-4 '
-                              )
-                            }
-                          >
-                            {' '}
-                            {item.name}
-                          </a>
-                        ))}
-                      </div>
-                    </Disclosure.Panel>
-                  </>
-                );
-              }}
-            </Disclosure>
-          </div>
+                  {/* Desktop Menu */}
+                  <div className="hidden md:flex items-center space-x-10 font-semibold text-lg">
+                    {menu.map((item) => (
+                      <a
+                        key={item.id}
+                        href={item.href}
+                        className="text-nobel hover:text-blue-500 transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* Mobile Menu Button */}
+                  <Disclosure.Button className="md:hidden p-2 rounded-md text-gray-600 hover:text-black">
+                    <span className="sr-only">Open main menu</span>
+                    {open ? (
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    )}
+                  </Disclosure.Button>
+                </div>
+
+                {/* Mobile Menu Panel */}
+                <Disclosure.Panel className="md:hidden">
+                  <div className="space-y-4 bg-gray-100 p-4">
+                    {menu.map((item) => (
+                      <a
+                        key={item.id}
+                        href={item.href}
+                        className="block text-lg font-medium text-gray-700 hover:text-blue-500"
+                        onClick={() => Disclosure.close()} // Close menu on click
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
         </header>
-        {!headerOpen && <HeroSection />}
       </div>
     </div>
   );
