@@ -49,7 +49,7 @@ const titleVariants = {
 
 const Team = () => {
   return (
-    <div id="team" className="min-h-screen bg-gray-100 text-black rounded-lg">
+    <div id="team" className="min-h-screen bg-gray-200 text-black rounded-lg">
       {/* <ParticlesBackground /> */}
       {/* Header */}
       {/* <header className="flex flex-col items-center justify-center py-8 bg-gradient-to-r from-blue-500 to-teal-400 text-white">
@@ -74,8 +74,8 @@ const Team = () => {
 
       {/* About Section */}
       <section className="py-10 px-5 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Meet Our Team</h2>
-        <p className="text-lg">
+        <h2 className="lg:text-4xl text-3xl font-semibold mb-4">Meet Our Team</h2>
+        <p className="lg:text-2xl text-lg">
           We are a group of passionate developers and designers dedicated to
           creating cutting-edge tech solutions.
         </p>
@@ -86,7 +86,7 @@ const Team = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            className="bg-white hover:cursor-pointer rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
           >
             <img
               src={member.image}

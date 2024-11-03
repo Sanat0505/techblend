@@ -32,8 +32,8 @@ const menu = [
 
 export default function Header({ setOpen, headerOpen }) {
   return (
-    <div className=" header-image  small_shadow text-white bg-opacity-20 rounded-lg">
-      <div className="bg-black rounded-lg ">
+    <div className=" header-image  small_shadow text-black bg-opacity-20 rounded-lg">
+      <div className="bg-gray-200 rounded-lg ">
         <header className="container mx-auto px-6 ">
           <div
             className={`mx-4 py-5 sm:py-5 md:py-10  sm:mx-4 md:mx-4 lg:mx-6 2xl:mx-0 ${
@@ -54,8 +54,8 @@ export default function Header({ setOpen, headerOpen }) {
                         <div className="flex lg:flex-1">
                           <Link to="/" className="-m-1.5 p-1.5">
                             <div className="flex gap-[10px] items-center">
-                              <div className="p-2 rounded-full">
-                                <img className="h-12 w-auto" src={logo} alt="TechBlend" />
+                              <div className=" rounded-full">
+                                <img className="h-20 w-auto" src={logo} alt="TechBlend" />
                               </div>
                               {/* <div className="font-JotiOne text-2xl">TechBlend</div> */}
                             </div>
@@ -64,7 +64,7 @@ export default function Header({ setOpen, headerOpen }) {
                       </div>
                       <div className="flex items-center animate__animated animate__bounceInDown animate__delay-1s text-base tracking-wide">
                         <div className="hidden md:ml-6 md:flex md:items-center">
-                          <div className="hidden md:-my-px md:ml-6 md:flex md:space-x-14 font-JotiOne text-lg font-bold">
+                          <div className="hidden md:-my-px md:ml-6 md:flex md:space-x-14 font-JotiOne text-lg md:text-2xl lg:text-3xl font-bold">
                             {menu.map((item) => (
                               <a
                                 key={item.name}

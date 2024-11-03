@@ -12,8 +12,8 @@ const About = () => (
       {/* <div className=" container mx-auto  px-6">
         <div className="md:flex md:justify-between md:gap-12 flex-row-reverse"> */}
       <div className="container mx-auto text-center  p-12 animate__animated animate__backInLeft">
-        <p className="text-black leading-relaxed">
-          <span className="font-semibold text-2xl">Welcome to TECHBLEND</span> – where innovation and excellence are prioritised
+        <p className="text-black leading-relaxed lg:text-2xl text-lg">
+          <span className="font-semibold lg:text-4xl text-2xl">Welcome to TECHBLEND</span> – where innovation and excellence are prioritised
           for our upcoming Digital Technologies. We are a passionate team of
           Designers, Developers and Digital Strategists dedicated to blending
           advanced technology with creative vision to craft high-performance web
