@@ -4,6 +4,7 @@ import sanatImage from "../assets/images/sanat1.png";
 import asmaImage from "../assets/images/asma.png";
 import anushkaImage from "../assets/images/anushka.png";
 import aartiImage from "../assets/images/aarti.png";
+import shehlaImage from "../assets/images/shehla.png";
 import Product from "./Product";
 
 const teamMembers = [
@@ -31,14 +32,16 @@ const teamMembers = [
   {
     name: "Aarti Majumdar",
     role: "Web developer",
-    description: "Deeply committed to advancing web and API development, utilizing  frontend development expertise to build responsive, intuitive, and high-performing digital solutions.",
+    description:
+      "Deeply committed to advancing web and API development, utilizing  frontend development expertise to build responsive, intuitive, and high-performing digital solutions.",
     image: aartiImage,
   },
   {
-    name: "Team member 5",
-    role: "Role",
-    description: "....",
-    image: "path-to-image5.jpg",
+    name: "Shehla Shehla",
+    role: "Backend Developer",
+    description:
+      "A dedicated and enthusiastic individual with a passion for Software Development and Backend Development.",
+    image: shehlaImage,
   },
 ];
 
