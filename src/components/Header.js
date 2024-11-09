@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="header-image small_shadow font-semibold text-black bg-opacity-20 rounded-lg">
       <div className="bg-silver_main rounded-lg">
-        <header className="container mx-auto px-6 max-md:pb-6">
+        <header className="container mx-auto px-6">
           <Disclosure as="nav">
             {({ open }) => (
               <>

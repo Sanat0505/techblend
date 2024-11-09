@@ -47,19 +47,25 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div id="team" className="min-h-screen bg-silver_main text-black rounded-lg">
+    <div
+      id="team"
+      className="min-h-screen bg-silver_main text-black rounded-lg"
+    >
       {/* About Section */}
       <section className="py-10 px-5 text-center">
         <h2 className="lg:text-4xl text-3xl font-semibold mb-4">
           Meet Our Team
         </h2>
         <p className="lg:text-2xl text-lg">
-        We are a group of dedicated students in development and design, focused on building innovative tech solutions and advancing our skills through hands-on projects.
+          We are a group of dedicated students in development and design,
+          focused on building innovative tech solutions and advancing our skills
+          through hands-on projects.
         </p>
       </section>
 
       {/* Team Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 rounded-lg">
+
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 max-w-6xl mx-auto">
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -68,7 +74,7 @@ const Team = () => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-48 md:h-64 lg:h-96 object-cover"
+              className="w-full h-[calc(50vh-64px)] object-cover object-center"
             />
             <div className="p-6 text-justify">
               <h3 className="text-2xl font-semibold">{member.name}</h3>
@@ -78,6 +84,7 @@ const Team = () => {
           </div>
         ))}
       </section>
+
       <Product />
 
       <ContactUs />
