@@ -1,22 +1,40 @@
 import React from "react";
 import Team from "./Team";
-import '../assets/styles/style.css'
+import '../assets/styles/style.css';
+import heroImage from '../assets/images/hero_image.png'
 
 const About = () => (
   <>
-  <div className="bg-hero rounded-lg mx-auto min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-    <div className="container mx-auto text-center p-6 sm:p-12 animate__animated animate__backInLeft">
-      <p className="text-black leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl">
-        <span className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl block mb-4">
-          Welcome to TECHBLEND
-        </span>
-        – where innovation and excellence are prioritized for our upcoming Digital Technologies. We are a passionate team of Designers, Developers, and Digital Strategists dedicated to blending advanced technology with creative vision to craft high-performance web solutions.
-        <br />
-        <br />
-        We strive to bring each client’s vision to life in a way that’s future-ready and scalable. Our goal is to deliver products that not only look great but also provide seamless user experiences and lasting impact. Partner with TechBlend, and let’s build a smarter, more connected digital experience together.
-      </p>
+
+<div className=" bg-black rounded-lg mx-auto min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto flex flex-col md:flex-row items-center p-6 sm:p-12">
+      
+      {/* Hero Image Section */}
+      <div className="w-full md:w-1/2 mb-8 md:mb-0 animate__animated animate__backInLeft">
+        <img
+          src={heroImage}
+          alt="Tech solutions hero image"
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="w-full md:w-1/2 text-justify md:text-left animate__animated animate__backInRight">
+        <p className="text-silver_main text-justify leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl">
+          <span className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl block mb-4">
+            Welcome to TECHBLEND
+          </span>
+          – a platform where emerging student talent in design, development, and digital strategy converges. Our team of passionate is dedicated to learning and exploring advanced technologies such as Blockchain Technology, AI and Full stake development while creating impactful digital solutions.
+          <br />
+          <br />
+          As students, our goal is to bring fresh perspectives to the field and develop future-ready skills by working on real-world projects. Join us at TechBlend as we build innovative and meaningful digital experiences together, one project at a time.
+        </p>
+      </div>
+      
+
     </div>
   </div>
+
   <Team />
 </>
 );

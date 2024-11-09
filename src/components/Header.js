@@ -1,20 +1,20 @@
-import React from 'react';
-import logo from '../assets/images/techblend.png';
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import React from "react";
+import logo from "../assets/images/techblend.png";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const menu = [
-  { name: 'About', href: '#about', id: 'about' },
-  { name: 'Our Team', href: '#team', id: 'ourteam' },
-  { name: 'Our Product', href: '#product', id: 'product' },
-  { name: 'Contact Us', href: '#contact', id: 'contact' },
+  { name: "Home", href: "#about", id: "about" },
+  { name: "Team", href: "#team", id: "ourteam" },
+  { name: "Our Product", href: "#product", id: "product" },
+  { name: "Contact Us", href: "#contact", id: "contact" },
 ];
 
 export default function Header() {
   return (
     <div className="header-image small_shadow font-semibold text-black bg-opacity-20 rounded-lg">
-      <div className="bg-gray-200 rounded-lg">
-        <header className="container mx-auto px-6">
+      <div className="bg-silver_main rounded-lg">
+        <header className="container mx-auto px-6 max-md:pb-6">
           <Disclosure as="nav">
             {({ open }) => (
               <>
@@ -31,7 +31,7 @@ export default function Header() {
                       <a
                         key={item.id}
                         href={item.href}
-                        className="text-nobel hover:text-blue-500 transition-colors"
+                        className="text-nobel hover:text-blue_main transition-colors"
                       >
                         {item.name}
                       </a>
@@ -39,7 +39,7 @@ export default function Header() {
                   </div>
 
                   {/* Mobile Menu Button */}
-                  <Disclosure.Button className="md:hidden p-2 rounded-md text-gray-600 hover:text-black">
+                  <Disclosure.Button className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue_main">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -51,12 +51,12 @@ export default function Header() {
 
                 {/* Mobile Menu Panel */}
                 <Disclosure.Panel className="md:hidden">
-                  <div className="space-y-4 bg-gray-100 p-4">
+                  <div className="space-y-4 bg-silver_main p-4 rounded-lg">
                     {menu.map((item) => (
                       <a
                         key={item.id}
                         href={item.href}
-                        className="block text-lg font-medium text-gray-700 hover:text-blue-500"
+                        className="block text-lg font-medium text-blue_main hover:text-blue_main"
                         onClick={() => Disclosure.close()} // Close menu on click
                       >
                         {item.name}

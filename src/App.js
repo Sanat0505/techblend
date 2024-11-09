@@ -8,7 +8,7 @@ function App() {
   Aos.init();
   const [open, setOpen] = useState(false);
   return (
-    <div className="min-h-screen font-Mulish rounded-lg flex items-center justify-center p-10 relative">
+    <div className="min-h-screen font-Mulish rounded-lg flex items-center justify-center p-3 sm:p-5 md:p-10 relative">
       {/* <Team /> */}
       <div className="flex flex-col font-monda shadow-box_shadow rounded-lg ">
         <BrowserRouter>

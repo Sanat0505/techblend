@@ -1,11 +1,12 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaHome } from "react-icons/fa";
+import ImprintModal from "./Modal/ImprintModal";
 
 function ContactUs() {
   return (
     <div
       id="contact"
-      className="min-h-screen bg-gray-200 flex items-center justify-center rounded-lg"
+      className="min-h-screen bg-silver_main flex items-center justify-center rounded-lg"
     >
       <div className=" w-full p-8">
         <h2 className="lg:text-4xl text-3xl font-bold text-center text-black mb-8">
@@ -21,7 +22,7 @@ function ContactUs() {
             </div>
             <div className="flex items-center space-x-3">
               <FaEnvelope className="text-black" />
-              <p className="text-gray-700 font-medium">contact@techblend.com</p>
+              <p className="text-gray-700 font-medium">team.techblend@gmail.com</p>
             </div>
             <div className="flex items-center space-x-3">
               <FaHome className="text-black" />
@@ -44,8 +45,11 @@ function ContactUs() {
             ></iframe>
           </div>
         </div>
-        <div className="text-center text-gray-500 text-sm mt-10">
+        <div className="flex md:flex-row flex-col items-center justify-between text-black text-sm mt-10 md:px-10">
           <p>© 2024 TechBlend. All rights reserved.</p>
+          <div className="text-semibold">
+            <ImprintModal />
+          </div>
         </div>
       </div>
     </div>
