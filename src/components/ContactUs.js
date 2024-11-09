@@ -22,13 +22,27 @@ function ContactUs() {
             </div>
             <div className="flex items-center space-x-3">
               <FaEnvelope className="text-black" />
-              <p className="text-gray-700 font-medium">team.techblend@gmail.com</p>
+              {/* <p className="text-gray-700 font-medium">team.techblend@gmail.com</p> */}
+              <a
+                href="mailto:team.techblend@gmail.com"
+                className="text-gray-700 font-medium"
+              >
+                team.techblend@gmail.com
+              </a>
             </div>
             <div className="flex items-center space-x-3">
               <FaHome className="text-black" />
-              <p className="text-gray-700 font-medium">
+              {/* <p className="text-gray-700 font-medium">
                 Reichenhainer Str. 35/37
-              </p>
+              </p> */}
+              <a
+                href="https://www.google.com/maps/place/Reichenhainer+Str.+35,+09126+Chemnitz/@50.8183696,12.9272408,16z/data=!3m1!4b1!4m6!3m5!1s0x47a7466d287ccc3d:0x790d48521ad4b018!8m2!3d50.8183662!4d12.9298157!16s%2Fg%2F11c2hj7hgf?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 font-medium"
+              >
+                Reichenhainer Str. 35/37
+              </a>
             </div>
           </div>
 

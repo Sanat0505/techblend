@@ -56,7 +56,7 @@ export default function Header() {
                       <a
                         key={item.id}
                         href={item.href}
-                        className="block text-lg font-medium text-blue_main hover:text-blue_main"
+                        className="block text-lg font-medium text-black hover:text-blue_main"
                         onClick={() => Disclosure.close()} // Close menu on click
                       >
                         {item.name}
