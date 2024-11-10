@@ -79,7 +79,7 @@ const Team = () => {
 
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 max-w-6xl mx-auto">
         <Tooltip
-        className="max-lg:hidden"
+          className="max-lg:hidden"
           id="my-tooltip"
           style={{ backgroundColor: "rgb(0, 0, 0)", color: "#C0C0C0" }}
         />
@@ -87,15 +87,14 @@ const Team = () => {
           <div
             key={index}
             className="bg-white hover:cursor-pointer rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-            data-tooltip-id="my-tooltip"
-            data-tooltip-content={member.description}
-            data-tooltip-place={`${index + 1 < 4 ? "top" : "bottom"}`}
+            // data-tooltip-id="my-tooltip"
+            // data-tooltip-content={member.description}
+            // data-tooltip-place={`${index + 1 < 4 ? "top" : "bottom"}`}
           >
             <img
               src={member.image}
               alt={member.name}
               className="w-full h-[calc(50vh-64px)] object-cover object-center"
-              
             />
             <div className="p-6 text-justify">
               <h3 className="text-2xl font-semibold">{member.name}</h3>
