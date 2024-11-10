@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import About from "./components/About";
+import Home from "./components/Home";
 import Header from "./components/Header";
 import Aos from "aos";
 
@@ -15,7 +15,7 @@ function App() {
           <Header setOpen={setOpen} headerOpen={open} />
           <div className={` flex-1 ${open ? 'hidden' : 'block'}`}>
             <Routes>
-              <Route path="/" element={<About />} />
+              <Route path="/" element={<Home />} />
             </Routes>
             
           </div>

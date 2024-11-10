@@ -61,7 +61,7 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="min-h-screen bg-silver_main text-black rounded-lg"
+      className="min-h-screen bg-silver_main text-black rounded-lg border-2 border-black"
     >
       {/* About Section */}
       <section className="py-10 px-5 text-center">

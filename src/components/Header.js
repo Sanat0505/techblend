@@ -4,7 +4,8 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const menu = [
-  { name: "Home", href: "#about", id: "about" },
+  { name: "Home", href: "#home", id: "home" },
+  { name: "About", href: "#about", id: "about" },
   { name: "Team", href: "#team", id: "ourteam" },
   { name: "Our Product", href: "#product", id: "product" },
   { name: "Contact Us", href: "#contact", id: "contact" },
@@ -12,7 +13,7 @@ const menu = [
 
 export default function Header() {
   return (
-    <div className="header-image small_shadow font-semibold text-black bg-opacity-20 rounded-lg">
+    <div className="header-image small_shadow font-semibold text-black bg-opacity-20 rounded-lg border-2 border-black">
       <div className="bg-silver_main rounded-lg">
         <header className="container mx-auto px-6">
           <Disclosure as="nav">
