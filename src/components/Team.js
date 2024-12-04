@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     name: "Asmaa Abubader",
-    role: "Frontend Developer",
+    role: "Data Analyst",
     description:
       "A UX Designer in progress ( as entry level). Having a solid knowledge using Mysql",
     image: asmaImage,
@@ -39,7 +39,7 @@ const teamMembers = [
   },
   {
     name: "Aarti Majumdar",
-    role: "Web developer",
+    role: "QA Specialist",
     description:
       "Deeply committed to advancing web and API development, utilizing  frontend development expertise to build responsive, intuitive, and high-performing digital solutions.",
     image: aartiImage,
@@ -77,7 +77,7 @@ const Team = () => {
 
       {/* Team Section */}
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 max-w-6xl mx-auto">
+      <section className="flex flex-wrap items-center justify-center gap-8 p-5 md:p-10 max-w-6xl mx-auto">
         {/* <Tooltip
           className="max-lg:hidden"
           id="my-tooltip"
